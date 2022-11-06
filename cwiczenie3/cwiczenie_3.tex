@@ -1,0 +1,143 @@
+\documentclass[12pt, letterpaper, titlepage]{article}
+\usepackage[left=3.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage[MeX]{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{enumerate}
+\usepackage{amsmath} %pakiet matematyczny
+\usepackage{amssymb} %pakiet dodatkowych symboli
+\title{Tabele w TeXu}
+\author{Michał Pączkowski}
+\date{Listopad 2022}
+
+\begin{document}
+\maketitle
+\section{Zadanie}
+\begin{table}[h]
+\centering\caption{Przykładowy system decyzyjny (U,A,d), modelujący problem diagnozy medycznej, której efektem jest decyzja o wykonaniu lub nie wykonaniu operacji wycięcia wyrostka robaczkowego,\\ U = $\{u1, u2,...,u10\}$, A = $\{a1, a2\}$, d $\in$ D=$ \{TAK, NIE\}$}
+\begin{tabular}{ c | c c c }
+\hline
+\hline
+Pacjent & Ból brzucha & Temperatura ciała & Operacja\\
+\hline
+u1 & Mocny & Wysoka & Tak \\
+u2 & Średni & Wysoka & Tak \\
+u3 & Mocny & Średnia & Tak \\
+u4 & Mocny & Niska & Tak \\
+u5 & Średni & Średnia & Tak \\
+u6 & Średni & Średnia & Nie \\
+u7 & Mały & Wysoka & Nie \\
+u8 & Mały & Niska & Nie \\
+u9 & Mocny & Niska & Nie \\
+u10 & Mały & Średnia & Nie \\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+\section{Zadanie}
+\textit{Bramki logiczne}
+\begin{table}[h]
+\centering
+\caption*{NOT}
+\begin{tabular}{ c | c }
+\hline
+\hline
+Wejście & Wyjście\\
+\hline
+0 & 1\\
+1 & 0\\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption*{AND}
+\begin{tabular}{ c  c | c }
+\hline
+\hline
+A & B & Wyjście\\
+\hline
+0 & 0 & 0\\
+0 & 1 & 0\\
+1 & 0 & 0\\
+1 & 1 & 1\\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption*{OR}
+\begin{tabular}{ c  c | c }
+\hline
+\hline
+A & B & Wyjście\\
+\hline
+0 & 0 & 0\\
+0 & 1 & 1\\
+1 & 0 & 1\\
+1 & 1 & 1\\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption*{NAND}
+\begin{tabular}{ c  c | c }
+\hline
+\hline
+A & B & Wyjście\\
+\hline
+0 & 0 & 1\\
+0 & 1 & 1\\
+1 & 0 & 1\\
+1 & 1 & 0\\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption*{NOR}
+\begin{tabular}{ c  c | c }
+\hline
+\hline
+A & B & Wyjście\\
+\hline
+0 & 0 & 1\\
+0 & 1 & 0\\
+1 & 0 & 0\\
+1 & 1 & 0\\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption*{XOR}
+\begin{tabular}{ c  c | c }
+\hline
+\hline
+A & B & Wyjście\\
+\hline
+0 & 0 & 0\\
+0 & 1 & 1\\
+1 & 0 & 1\\
+1 & 1 & 0\\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}
